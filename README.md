@@ -1,4 +1,4 @@
-slickjs
+slick
 =======
 
-This is a webjar for slick.js
+This is a webjar for slick jquery plugin
