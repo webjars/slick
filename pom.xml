@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>slick</artifactId>
-    <version>1.5.0-SNAPSHOT</version>
+    <version>1.5.0</version>
     <name>slick</name>
     <description>WebJar for slick jquery plugin</description>
     <url>http://webjars.org</url>
@@ -28,7 +28,7 @@
         <url>http://github.com/webjars/slick</url>
         <connection>scm:git:https://github.com/webjars/slick.git</connection>
         <developerConnection>scm:git:https://github.com/webjars/slick.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>slick-1.5.0</tag>
     </scm>
 
     <developers>
@@ -67,13 +67,13 @@
                         <goals><goal>run</goal></goals>
                         <configuration>
                             <target>
-                                <echo message="download archive"/>
-                                <get src="${upstream.url}" dest="${project.build.directory}/${project.artifactId}.zip"/>
-                                <echo message="unzip archive"/>
-                                <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}"/>
-                                <echo message="moving resources"/>
+                                <echo message="download archive" />
+                                <get src="${upstream.url}" dest="${project.build.directory}/${project.artifactId}.zip" />
+                                <echo message="unzip archive" />
+                                <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}" />
+                                <echo message="moving resources" />
                                 <move todir="${destDir}">
-                                    <fileset dir="${project.build.directory}/slick-${upstream.version}/slick"/>
+                                    <fileset dir="${project.build.directory}/slick-${upstream.version}/slick" />
                                 </move>
                             </target>
                         </configuration>
